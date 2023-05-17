@@ -21,7 +21,7 @@ const Technologies = () => {
 
         <div className='  hover:translate-y-4  duration-1000  hover:animate-spin'>
 
-          <img src="/picture/css-3.png" alt="" />
+          <img src="/picture/css-3.png " alt="" />
          <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900'>CSS</h2>
         </div>
 
@@ -34,15 +34,15 @@ const Technologies = () => {
           <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900' >TAILWIND</h2>
         </div>
         <div  className='  hover:translate-y-4  duration-1000  hover:animate-spin' >
-          <img src="public/picture/pngwing.com.png" alt="" />
+          <img src="/picture/pngwing.com.png" alt="" />
           <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900'>REACT</h2>
         </div>
         <div className='  hover:translate-y-4  duration-1000  hover:animate-spin'>
-          <img src="public/picture/js.png" alt="" />
+          <img src="/picture/js.png" alt="" />
           <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900'>JAVASCRIPT</h2>
         </div>
         <div className='  hover:translate-y-4  duration-1000  hover:animate-spin hover:scale-x-75' >
-          <img src="public/picture/java.png" alt="" />
+          <img src="/picture/java.png" alt="" />
           <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900'>JAVA</h2>
           
         </div>
