@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <section className='  font-[Oregano] font-extrabold '>
       <div className=' flex justify-start p-2 ' >
-        <img className='w-[20px] h-[20px]' src="public/picture/pngwing.com (1).png" alt="" />
+        <img className='w-[20px] h-[20px]' src="/picture/pngwing.com (1).png" alt="" />
         <span className='text-black font-sm text-sm '> Kahuaski </span>
       </div>
 
