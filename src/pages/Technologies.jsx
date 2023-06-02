@@ -14,7 +14,7 @@ const Technologies = () => {
 
         return (
 
-                <section className='  static grid grid-cols-2  font-[Oregano] bg-[url("public/picture/fondo-web.jpg")] bg-cover shadow-xl'>
+                <section className='  static grid grid-cols-2  font-[Oregano] bg-[url("/picture/fondo-web.jpg")] bg-cover shadow-xl'>
                         <div className='text-center p-4 min-h-screen'>
                                 <h1 className='text-center text-5xl m-4  text-white font-extrabold bg-blue-800 skew-x-12 box-border h-14 w-96'> Technologies</h1>
 
