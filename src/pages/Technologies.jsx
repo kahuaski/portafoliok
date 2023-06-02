@@ -67,13 +67,13 @@ const Technologies = () => {
                                 </div>
                                 <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
 
-                                        <img src="./picture/pngwing.com.png" alt="" />
+                                        <img src="/picture/pngwing.com.png" alt="" />
 
 
                                 </div>
                                 <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
 
-                                        <img src="./picture/icons8-tailwind-css-480.png" alt="" />
+                                        <img src="/picture/icons8-tailwind-css-480.png" alt="" />
 
 
                                 </div>
