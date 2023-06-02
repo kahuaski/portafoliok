@@ -2,6 +2,7 @@
 import './App.css'
 import Header from './layout/Header'
 import Homes from './pages/Homes'
+import Projects from './pages/Projects'
 import Technologies from './pages/Technologies'
 
 function App() {
@@ -9,11 +10,11 @@ function App() {
 
   return (
     <>
-      <section className=' bg-gradient-to-r from-teal-200 to-white min-h-screen  ' >
+<section  >  
         <Header />
-
         <Homes />
         <Technologies />
+        <Projects />
       </section>
     </>
   )

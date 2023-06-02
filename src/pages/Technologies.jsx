@@ -1,57 +1,87 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 const Technologies = () => {
-  const elementRef = useRef(null);
+        const elementRef = useRef(null);
 
-  useEffect(() => {
-    gsap.from(elementRef.current, {
-      opacity: 1,
-      scale: 1,
-      rotation: 120,
-      duration: 10,
-    });
-  }, []);
+        useEffect(() => {
+                gsap.from(elementRef.current, {
+                        opacity: 1,
+                        scale: 1,
+                        rotation: 120,
+                        duration: 10,
+                });
+        }, []);
 
-  return (
+        return (
 
-    <section className=' px-60 '>
+                <section className='  static grid grid-cols-2  font-[Oregano] bg-[url("public/picture/fondo-web.jpg")] bg-cover shadow-xl'>
+                        <div className='text-center p-4 min-h-screen'>
+                                <h1 className='text-center text-5xl m-4  text-white font-extrabold bg-blue-800 skew-x-12 box-border h-14 w-96'> Technologies</h1>
 
-      <h1 className='font-[Oregano] font-bold text-8xl text-center align-text-top py-8' >Technologies</h1>
-      <div className='  grid grid-cols-3  gap-8 p-4 w-[900px]  '>
+                                <p className='text-3xl font-bold'>As a web developer, it's important to stay up to date with the latest technologies that facilitate the design and functionality of websites. In this post, I will share some of the technologies that I master and that have helped me create quality web projects.
+                                </p>
 
-        <div className='  hover:translate-y-4  duration-1000  hover:animate-spin'>
+                        </div>
 
-          <img src="/picture/css-3.png " alt="" />
-         <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900'>CSS</h2>
-        </div>
+                        <div className='grid grid-cols-3  gap-1  '>
 
-        <div  className='  hover:translate-y-4  duration-1000  hover:animate-spin'>
-          <img  src="/picture/html5 (1).png" alt="" />
-          <h2  className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900'>HTML5</h2>
-        </div>
-        <div className='  hover:translate-y-4  duration-1000  hover:animate-spin'>
-          <img src="/picture/icons8-tailwind-css-480.png" alt="" />
-          <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900' >TAILWIND</h2>
-        </div>
-        <div  className='  hover:translate-y-4  duration-1000  hover:animate-spin' >
-          <img src="/picture/pngwing.com.png" alt="" />
-          <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900'>REACT</h2>
-        </div>
-        <div className='  hover:translate-y-4  duration-1000  hover:animate-spin'>
-          <img src="/picture/js.png" alt="" />
-          <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900'>JAVASCRIPT</h2>
-        </div>
-        <div className='  hover:translate-y-4  duration-1000  hover:animate-spin hover:scale-x-75' >
-          <img src="/picture/java.png" alt="" />
-          <h2 className='text-center py-4 text-4xl font-bold font-[Oregano] text-teal-900'>JAVA</h2>
-          
-        </div>
-        
+                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer '>
+
+                                        <img src="/icons/pngegg.png" alt="" />
+
+                                </div>
+                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+                                        <img src="/icons/pngegg (1).png" alt="" />
 
 
-      </div>
-    </section>
-  )
+                                </div>
+                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+                                        <img src="/icons/pngegg (2).png" alt="" />
+
+
+
+                                </div>
+                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+
+                                        <img src="/icons/pngegg (4).png" alt="" />
+
+
+                                </div>
+                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+
+                                        <img src="/icons/pngegg (5).png" alt="" />
+
+
+                                </div>
+                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+
+                                        <img src="/icons/pngegg (6).png" alt="" />
+
+
+                                </div>
+                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+
+                                        <img src="/icons/pngegg (7).png" alt="" />
+
+
+                                </div>
+                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+
+                                        <img src="public/picture/pngwing.com.png" alt="" />
+
+
+                                </div>
+                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+
+                                        <img src="public/picture/icons8-tailwind-css-480.png" alt="" />
+
+
+                                </div>
+
+
+                        </div>
+                </section>
+        )
 }
 
 export default Technologies

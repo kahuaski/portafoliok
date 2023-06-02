@@ -4,59 +4,50 @@ import { motion } from 'framer-motion'
 import { rotateInDownLeft } from 'react-animations';
 const Homes = () => {
 
-    const elementRef = useRef(null);
 
-    useEffect(() => {
-      gsap.from(elementRef.current, {
-        opacity: 1,
-        scale: 0.5,
-        x:-100,
-        y:-150,
-        duration: 6,
-        ease: 'power1.out',
-      });
-    }, []);
+
     return (
-        <section className='   text-center text-white  p-6 grid grid-cols-2 items-end  '>
-            <div  className=''>
+        <section className='static   bg-[url("/picture/medium-shot-man-working-computer.jpg")] bg-cover min-h-screen w-[100%]  font-[Oregano] shadow-xl flex place-items-center p-48 '>
+        
+        
+        
+        <div className='   grid gap-6  '>
             
-            <motion.div
-      initial={{ opacity: 0, y: 20,  }}
-      animate={{ opacity: 1, x: 10, scale:0.9, }}
-      transition={{ duration: 6}}
-      
-     className=''>
-     
-<img src="/picture/3918927.png" alt=""/>
-    </motion.div>
-            
+            <div className=' hover:translate-x-4 duration-700 hover:bg-blue-800 hover:box-border h-20 w-[400px] hover:rounded-s-xl'>
+                <h1 className='text-white font-extrabold font-[Oregano] text-6xl hover:text-red-800 hover:p-2  '>Diego Cahuasqui </h1>
             </div>
-            <div >
-                <div className='flex justify-center items-start'>
-            
+                <span className='text-white font-extrabold font-[Oregano] text-4xl  bg-blue-800 p-4 box-border h-16 w-64 rounded-s-xl'>Web Developer</span>
                 
-                <img className='w-[100px] hover:w-[200px] duration-1000 rounded-full border-2 border-teal-500 ' src="/picture/kahauski11.png" alt="" />
-                </div>
-                <div className='py-2 hover:translate-x-4 duration-500 text-center skew-x-12  font-[Oregano] hover:text-4xl'>
-                    <h1 className='text-xl font-extrabold text-black  ' >I'm Diego  <span className='text-teal-500 text-xl'>Cahuasqui
-                    </span> </h1>
+               <div>
+               <button className='rounded-br-xl text-white bg-blue-700  box-border h-12 w-32 hover:bg-blue-400 duration-700 font-bold text-xl hover:translate-y-2'>About</button>
 
-                </div>
-                <div className='p-2 text-black font-[Oregano]  text-xl'>
-                    <p>I am an experienced web developer with a passion for creating clean and functional websites. My portfolio showcases a range of projects that demonstrate my skills in front-end and back-end technologies, including HTML, CSS, JavaScript, React, Next.js. I am also familiar with project management tools, and have experience with version control using Git. If you are interested in working with me or have any questions about my portfolio, please feel free to contact me.</p>
-                </div>
+               </div> 
             </div>
-            <hr />
-            <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, x: 10, scale:1.5, rotate:10 }}
-      transition={{ duration: 6 }}
-      
-     className='absolute bg-black'>
-     
-    </motion.div>
+        
+        <section className='fixed top-[30%] right-0'>
+        <div>
+          <ul className='grid gap-2' >
+            <li className=' rounded-xl bg-black  mr-1 p-4  hover:-translate-x-8 hover:p-4 hover:border-white duration-300 hover:bg-blue-200 ' >
+              <a href=""><i className='bx bxl-github  text-white text-4xl '></i></a>
+            </li>
+            <li className='rounded-xl bg-blue-800  mr-1 p-4  hover:-translate-x-8 hover:p-4 hover:border-white duration-300 hover:bg-blue-200 '>
+              <a href=""><i class='bx bxl-linkedin  text-white text-3xl'></i></a>
+            </li>
+            <li className='rounded-xl bg-sky-500  mr-1 p-4  hover:-translate-x-8 hover:p-4 hover:border-white duration-300 hover:bg-blue-100 text-center '>
+            <a href=""><i class='bx bxl-twitter  text-white text-3xl  '></i></a>
+            </li>
+            <li className='rounded-xl bg-gradient-to-br from-orange-500 to-red-500  mr-1 p-4  hover:-translate-x-8 hover:p-4 hover:border-white duration-300 hover:bg-blue-200  '>
+            <a href=""><i class='bx bxl-instagram   text-white text-4xl'></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+                     
+        
+        
+            
+            
         </section>
     )
 }
-
 export default Homes
