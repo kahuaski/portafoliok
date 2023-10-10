@@ -21,10 +21,10 @@ const Header = () => {
       <div className='text-xl  w-[100%]  text-white     '>
         <ul className='flex justify-end items-center gap-0' >
           <li onClick={handlenClik} className=' px-4 rounded-xl  hover:translate-x-2 duration-500 hover:bg-blue-900  hover:translate-y-2 hover:px-10 hover:text-white cursor-pointer ' >Home</li>
-          <li className=' px-4 rounded-xl  hover:translate-x-2 duration-500 hover:bg-blue-900  hover:translate-y-2 hover:px-10 hover:text-white cursor-pointer '>  About</li>
-          <li className=' px-4 rounded-xl  hover:translate-x-2 duration-500 hover:bg-blue-900  hover:translate-y-2 hover:px-10 hover:text-white cursor-pointer '>  Projects</li>
-          <li className=' px-4 rounded-xl  hover:translate-x-2 duration-500 hover:bg-blue-900  hover:translate-y-2 hover:px-10 hover:text-white cursor-pointer '>   Technologies</li>
-          <li className=' px-4 rounded-xl  hover:translate-x-2 duration-500 hover:bg-blue-900  hover:translate-y-2 hover:px-10 hover:text-white cursor-pointer '>  Contact</li>
+          <li className=' px-4 rounded-xl  hover:translate-x-2 duration-500 hover:bg-blue-900  hover:translate-y-2 hover:px-10 hover:text-white cursor-pointer '>  Acerca de Mi</li>
+          <li className=' px-4 rounded-xl  hover:translate-x-2 duration-500 hover:bg-blue-900  hover:translate-y-2 hover:px-10 hover:text-white cursor-pointer '>  Proyectos</li>
+          <li className=' px-4 rounded-xl  hover:translate-x-2 duration-500 hover:bg-blue-900  hover:translate-y-2 hover:px-10 hover:text-white cursor-pointer '>   Tecnologias</li>
+          <li className=' px-4 rounded-xl  hover:translate-x-2 duration-500 hover:bg-blue-900  hover:translate-y-2 hover:px-10 hover:text-white cursor-pointer '>  Contacto</li>
         </ul>
 
 

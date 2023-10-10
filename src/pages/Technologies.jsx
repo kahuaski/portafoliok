@@ -1,87 +1,192 @@
-import React, { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
+import React, { useEffect, useRef, useState } from "react";
+import Java_modal from "./components/Java_modal";
+import Jst_modal from "./components/Jst_modal";
+import Node_modal from "./components/Node_modal";
+import C_modal from "./components/C_modal"
+import CC_modal  from "./components/CC_modal"
+import React_modal from './components/React_modal'
+import Angular_modal from "./components/Angular_modal";
+import Css_modal from "./components/Css_modal";
+import Git_modal from "./components/Git_modal";
+import Html_modal from "./components/Html_modal"
+import Postman_modal  from "./components/Postman_modal"
+import Postgres_modal from './components/Postgres_modal'
+import Redux_modal from "./components/Redux_modal";
+import Typejs_modal from "./components/Typejs_modal";
+import Mysql_modal from "./components/Mysql_modal";
+import Render_modal from "./components/Render_modal";
+import Visual_modal from "./components/Visual_modal";
+
+
+
+
+
+import { useSpring, animated } from "react-spring";
+
+import { useAnimateKeyframes } from "react-simple-animate";
 const Technologies = () => {
-        const elementRef = useRef(null);
+  const { style } = useAnimateKeyframes({
+    iterationCount: "infinite",
+    direction: "alternate-reverse",
+    duration: 5,
+    keyframes: [
+      "transform: rotateX(0) rotateY(0) rotateZ(0)",
+      "transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)",
+    ],
+  });
 
-        useEffect(() => {
-                gsap.from(elementRef.current, {
-                        opacity: 1,
-                        scale: 1,
-                        rotation: 120,
-                        duration: 10,
-                });
-        }, []);
+  const elementRef = useRef(null);
 
-        return (
+  const [modalData, setModalData] = useState(null);
 
-                <section className='  static grid grid-cols-2  font-[Oregano] bg-[url("/picture/fondo-web.jpg")] bg-cover shadow-xl'>
-                        <div className='text-center p-4 min-h-screen'>
-                                <h1 className='text-center text-5xl m-4  text-white font-extrabold bg-blue-800 skew-x-12 box-border h-14 w-96'> Technologies</h1>
+  const openModal = (data) => {
+    setModalData(data);
+  };
 
-                                <p className='text-3xl font-bold'>As a web developer, it's important to stay up to date with the latest technologies that facilitate the design and functionality of websites. In this post, I will share some of the technologies that I master and that have helped me create quality web projects.
-                                </p>
+  const closeModal = () => {
+    setModalData(null);
+  };
 
-                        </div>
+  const modalAnimation = useSpring({
+    transform: modalData ? "translateX(20%)" : "translateY(10%)",
+    reverse: true,
+    opacity: modalData ? 0.5 : 0,
+  });
 
-                        <div className='grid grid-cols-3  gap-1  '>
-
-                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer '>
-
-                                        <img src="/icons/pngegg.png" alt="" />
-
-                                </div>
-                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
-                                        <img src="/icons/pngegg (1).png" alt="" />
-
-
-                                </div>
-                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
-                                        <img src="/icons/pngegg (2).png" alt="" />
-
-
-
-                                </div>
-                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
-
-                                        <img src="/icons/pngegg (4).png" alt="" />
-
-
-                                </div>
-                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
-
-                                        <img src="/icons/pngegg (5).png" alt="" />
+  const ModalComponents = {
+    java: Java_modal,
+    javascript: Jst_modal,
+    node:Node_modal,
+    postman: Postman_modal,
+    typescript: Typejs_modal,
+    angular:Angular_modal,
+    html: Html_modal,
+    css: Css_modal,
+    mysql:Mysql_modal,
+    postgres: Postgres_modal,
+    c:C_modal,
+    cc:CC_modal,
+    render: Render_modal,
+    visual: Visual_modal,
+    react:React_modal,
+    redux: Redux_modal,
+    git: Git_modal
+   
 
 
-                                </div>
-                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+    
+  };
+  const ModalDataComponent = modalData && ModalComponents[modalData.component];
 
-                                        <img src="/icons/pngegg (6).png" alt="" />
+  return (
+    <section className="  flex-1  font-[Oregano]  ">
+      <div className=" ">
+        <h1 className="text-center text-8xl m-4  text-slate-700 font-extrabold  skew-x-12 box-content border-sky-800      ">
+          Tecnologias
+        </h1>
+      </div>
 
+      <animated.div
+        style={modalAnimation}
+        color={"#fff000"}
+        onClick={() => closeModal()} // Cierra el modal cuando se hace clic fuera de él
+      >
+       {ModalDataComponent && (
+          <ModalDataComponent
+            isOpen={true}
+            onClose={closeModal}
+            className="fixed inset-0 flex items-center justify-center z-50 bg-gradient-to-b from-blue-500 to-indigo-800"
+          />
+        )}
+      </animated.div>
 
-                                </div>
-                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+      <div className="flex flex-wrap  m-5 gap-8">
+        <div
+          onClick={() => openModal({ component: "java" })}
+          className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 "
+        >
+          <img src="public/iconos/java_original_logo_icon_146458.png" alt="" />
+        </div>
 
-                                        <img src="/icons/pngegg (7).png" alt="" />
+        <div
+        onClick={() => openModal({ component: "javascript" })}
+         className="box-content border-sky-800   bg-white shadow-lg     m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/javascript_icon_130900.png" alt="" />
+        </div>
 
+        <div
+          onClick={() => openModal({ component: "node" })}
+         className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/file_type_node_icon_130301.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/file_type_html_icon_130541.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/react_original_logo_icon_146374.png" alt="" />
+        </div>
 
-                                </div>
-                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/file_type_css_icon_130661.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/file_type_angular_icon_130754.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/redux_original_logo_icon_146365.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img
+            src="public/iconos/mysql_original_wordmark_logo_icon_146417.png"
+            alt=""
+          />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img
+            src="public/iconos/applications_application_software_visualstudio_1819.png"
+            alt=""
+          />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/c_icon_132529.png" alt="" />
+        </div>
 
-                                        <img src="/picture/pngwing.com.png" alt="" />
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/c_sharp_icon_213045.png" alt="" />
+        </div>
 
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img
+            src="public/iconos/file_type_typescript_official_icon_130107.png"
+            alt=""
+          />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/folder_postgres_icon_161286.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/github_git_icon_145985.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img
+            src="public/iconos/postman_macos_bigsur_icon_189815.png"
+            alt=""
+          />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="public/iconos/render_logo_icon_248664.png" alt="" />
+        </div>
+      </div>
 
-                                </div>
-                                <div className='box-border h-[60%] w-[80%] m-2 p-2 border-4 rounded-lg border-black bg-gradient-to-tr from-neutral-400 to-blue-300 flex justify-items-center hover:translate-y-3 duration-700 cursor-pointer'>
+      <div>
+        <p>
+          Como desarrollador web Full Stack, tengo experiencia en una amplia
+          gama de tecnologías y habilidades que me permiten crear soluciones web
+          completas y eficientes.
+        </p>
+      </div>
+    </section>
+  );
+};
 
-                                        <img src="/picture/icons8-tailwind-css-480.png" alt="" />
-
-
-                                </div>
-
-
-                        </div>
-                </section>
-        )
-}
-
-export default Technologies
+export default Technologies;
