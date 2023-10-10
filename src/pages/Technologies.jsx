@@ -105,76 +105,76 @@ const Technologies = () => {
           onClick={() => openModal({ component: "java" })}
           className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 "
         >
-          <img src="public/iconos/java_original_logo_icon_146458.png" alt="" />
+          <img src="./iconos/java_original_logo_icon_146458.png" alt="" />
         </div>
 
         <div
         onClick={() => openModal({ component: "javascript" })}
          className="box-content border-sky-800   bg-white shadow-lg     m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/javascript_icon_130900.png" alt="" />
+          <img src="./iconos/javascript_icon_130900.png" alt="" />
         </div>
 
         <div
           onClick={() => openModal({ component: "node" })}
          className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/file_type_node_icon_130301.png" alt="" />
+          <img src="./iconos/file_type_node_icon_130301.png" alt="" />
         </div>
         <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/file_type_html_icon_130541.png" alt="" />
+          <img src="./iconos/file_type_html_icon_130541.png" alt="" />
         </div>
         <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/react_original_logo_icon_146374.png" alt="" />
-        </div>
-
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/file_type_css_icon_130661.png" alt="" />
-        </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/file_type_angular_icon_130754.png" alt="" />
-        </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/redux_original_logo_icon_146365.png" alt="" />
-        </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img
-            src="public/iconos/mysql_original_wordmark_logo_icon_146417.png"
-            alt=""
-          />
-        </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img
-            src="public/iconos/applications_application_software_visualstudio_1819.png"
-            alt=""
-          />
-        </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/c_icon_132529.png" alt="" />
+          <img src="./iconos/react_original_logo_icon_146374.png" alt="" />
         </div>
 
         <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/c_sharp_icon_213045.png" alt="" />
+          <img src="./iconos/file_type_css_icon_130661.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="./iconos/file_type_angular_icon_130754.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="./iconos/redux_original_logo_icon_146365.png" alt="" />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img
+            src="./iconos/mysql_original_wordmark_logo_icon_146417.png"
+            alt=""
+          />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img
+            src="./iconos/applications_application_software_visualstudio_1819.png"
+            alt=""
+          />
+        </div>
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="./iconos/c_icon_132529.png" alt="" />
+        </div>
+
+        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+          <img src="./iconos/c_sharp_icon_213045.png" alt="" />
         </div>
 
         <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img
-            src="public/iconos/file_type_typescript_official_icon_130107.png"
+            src="./iconos/file_type_typescript_official_icon_130107.png"
             alt=""
           />
         </div>
         <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/folder_postgres_icon_161286.png" alt="" />
+          <img src="./iconos/folder_postgres_icon_161286.png" alt="" />
         </div>
         <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/github_git_icon_145985.png" alt="" />
+          <img src="./iconos/github_git_icon_145985.png" alt="" />
         </div>
         <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img
-            src="public/iconos/postman_macos_bigsur_icon_189815.png"
+            src="./iconos/postman_macos_bigsur_icon_189815.png"
             alt=""
           />
         </div>
         <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
-          <img src="public/iconos/render_logo_icon_248664.png" alt="" />
+          <img src="./iconos/render_logo_icon_248664.png" alt="" />
         </div>
       </div>
 
