@@ -19,7 +19,7 @@ const Jst_modal = ({ isOpen, onClose }) => {
 </div>
 <div className="flex justify-items-center flex-col">
   <div className="flex justify-center">
-<img src="./iconos/javascript_icon_130900.png" className="w[50px] h-[50px]"/>
+<img src="/iconos/javascript_icon_130900.png" className="w[50px] h-[50px]"/>
   </div>
     
       <h2 className="text-8xl text-center">Javascript</h2>

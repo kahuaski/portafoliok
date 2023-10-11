@@ -19,7 +19,7 @@ const Java_modal = ({ isOpen, onClose }) => {
 </div>
 <div className="flex justify-items-center flex-col">
   <div className="flex justify-center">
-<img src="./iconos/java_original_logo_icon_146458.png" className="w[50px] h-[50px]"/>
+<img src="/iconos/java_original_logo_icon_146458.png" className="w[50px] h-[50px]"/>
   </div>
     
       <h2 className="text-8xl text-center">Java</h2>
