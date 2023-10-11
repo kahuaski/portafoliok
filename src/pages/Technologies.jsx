@@ -79,13 +79,21 @@ const Technologies = () => {
   const ModalDataComponent = modalData && ModalComponents[modalData.component];
 
   return (
-    <section className="  flex-1  font-[Oregano]  ">
-      <div className=" ">
-        <h1 className="text-center text-8xl m-4  text-slate-700 font-extrabold  skew-x-12 box-content border-sky-800      ">
+    <section className="  flex-1  font-[Oregano] mx-10  ">
+      <div className="  rounded-full shadow-blue-900 shadow-lg mx-[400px]  ring ring-dark-900 max-w-lg justify-center flex-1">
+        <h1 className="text-center text-6xl m-4  text-slate-700 font-extrabold  skew-x-12 box-content border-sky-800      ">
           Tecnologias
         </h1>
       </div>
 
+
+<div>
+        <p className="text-center text-2xl">
+          Como desarrollador web Full Stack, tengo experiencia en una amplia
+          gama de tecnologías y habilidades que me permiten crear soluciones web
+          completas y eficientes.
+        </p>
+      </div>
       <animated.div
         style={modalAnimation}
         color={"#fff000"}
@@ -119,72 +127,94 @@ const Technologies = () => {
          className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/file_type_node_icon_130301.png" alt="" />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div
+        onClick={() => openModal({ component: "html" })}
+         className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/file_type_html_icon_130541.png" alt="" />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div   onClick={() => openModal({ component: "react" })} 
+        className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/react_original_logo_icon_146374.png" alt="" />
         </div>
 
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div  
+         onClick={() => openModal({ component: "css" })}
+         className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/file_type_css_icon_130661.png" alt="" />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div
+         onClick={() => openModal({ component: "angular" })}
+         className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/file_type_angular_icon_130754.png" alt="" />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div 
+         onClick={() => openModal({ component: "redux" })}
+        className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/redux_original_logo_icon_146365.png" alt="" />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div
+        
+        onClick={() => openModal({ component: "mysql" })} className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img
             src="/iconos/mysql_original_wordmark_logo_icon_146417.png"
             alt=""
           />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div
+         onClick={() => openModal({ component: "visual" })}
+         className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img
             src="/iconos/applications_application_software_visualstudio_1819.png"
             alt=""
           />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div
+         onClick={() => openModal({ component: "c" })}
+         className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/c_icon_132529.png" alt="" />
         </div>
 
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div
+         onClick={() => openModal({ component: "cc" })}
+         className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/c_sharp_icon_213045.png" alt="" />
         </div>
 
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div 
+         onClick={() => openModal({ component: "typejs" })}
+        
+        className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img
             src="/iconos/file_type_typescript_official_icon_130107.png"
             alt=""
           />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div
+         onClick={() => openModal({ component: "postgres" })}
+         className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/folder_postgres_icon_161286.png" alt="" />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div
+         onClick={() => openModal({ component: "git" })}
+         className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/github_git_icon_145985.png" alt="" />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div 
+         onClick={() => openModal({ component: "postman" })}
+        className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img
             src="/iconos/postman_macos_bigsur_icon_189815.png"
             alt=""
           />
         </div>
-        <div className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
+        <div 
+         onClick={() => openModal({ component: "render" })}
+        className="box-content border-sky-800   bg-white shadow-lg    m-4 p-3 rounded-3xl   flex justify-center hover:translate-y-3 duration-700 cursor-pointer w-full sm:w-1/2 md:w-1/4 lg:w-1/6 xl:w-1/12 ">
           <img src="/iconos/render_logo_icon_248664.png" alt="" />
         </div>
       </div>
 
-      <div>
-        <p>
-          Como desarrollador web Full Stack, tengo experiencia en una amplia
-          gama de tecnologías y habilidades que me permiten crear soluciones web
-          completas y eficientes.
-        </p>
-      </div>
+      
     </section>
   );
 };

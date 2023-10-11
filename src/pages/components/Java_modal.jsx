@@ -8,7 +8,7 @@ const Java_modal = ({ isOpen, onClose }) => {
     <Modal
       isOpen={isOpen}
       onRequestClose={onClose}
-      className=" top-10 bottom-10 bg-white right-10 left-10 font-[Oregano] text-lg border-1 m-10 flex-1  flex-row-reverse gap-5 p-5  fixed inset-0 flex items-center justify-center z-50 bg-gradient-to-b from-blue-500 to-indigo-800" 
+      className="rounded-xl shadow-lg shadow-blue-900 top-10 bottom-10 bg-white right-10 left-10 font-[Oregano] text-lg border-solid m-10 flex-1  flex-row-reverse gap-5 p-5  fixed inset-0 flex items-center justify-center z-50 bg-gradient-to-b from-blue-500 to-indigo-800" 
     >
       <div  className="bg-white p-8 rounded-lg shadow-lg   ">
 <div className="flex justify-end">
@@ -19,7 +19,7 @@ const Java_modal = ({ isOpen, onClose }) => {
 </div>
 <div className="flex justify-items-center flex-col">
   <div className="flex justify-center">
-<img src="public/iconos/java_original_logo_icon_146458.png" className="w[50px] h-[50px]"/>
+<img src="./iconos/java_original_logo_icon_146458.png" className="w[50px] h-[50px]"/>
   </div>
     
       <h2 className="text-8xl text-center">Java</h2>
